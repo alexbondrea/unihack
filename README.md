@@ -1,6 +1,6 @@
-# UNIHACK 2021 - by MLH
+# Primăria Digital @ UNIHACK 2021
 ## TEAM:
-- Alexandru-Nadav Bondrea
-- Darius Scutariu
+- Alexandru-Nadav Bondrea (RO)
+- Darius Scutariu (RO)
 
-## Chosen Topic: TBA
+## Chosen Topic: Smart City
