@@ -135,15 +135,32 @@ void ChildBirth_info() {
 }
 
 void LocalTaxes_info() {
-    //WIP
+    cout<<endl;
+    cout<<"Locatie: Strada Primariei\n\n";
+
+    cout<<"Orar de functionare, Taxe si Impozite\n";
+    cout<<"Luni, marti, miercuri : intre orele 13:00 16:00\n";
+    cout<<"Joi : intre orele 13:00 17:30\n";
+    cout<<"Vineri : intre orele 13:00-14:30\n\n";
+
+    cout<<"[*] Plata taxelor si impozitelor locale mai poate fi efectuata online sau prin transfer bancar.\n";
 }
 
 void ghiseulro_info() {
-    //WIP
+    cout<<endl;
+    cout<<"Taxele si impozitele se pot plati de asemenea si pe site-ul oficial: https://www.ghiseul.ro/ \n";
 }
 
 void PublicRelations_info() {
-    //WIP
+    cout<<endl;
+    cout<<"Nume primar: Popescu Ion\n";
+    cout<<"Locatie: Strada Primariei, la Primaria Municipala\n\n";
+    cout<<"Inscrierea se face pe baza de cerere scrisa, depusa cu cel putin o zi lucratoare inainte, la Registratura Primariei\n";
+    cout<<"Model de cerere: https://mag.wcoomd.org/uploads/2018/05/blank.pdf\n";
+    cout<<"Program de audiente\n"<<"De luni pana vineri, orele 08:00 16:00\n\n";
+
+    cout<<"Date de contact:\n"<<"Email: relatiipublice@primaria.ro\n"<<"Telefon: 0744/777777\n"<<"Fax: 0261/777777\n";
+
 }
 
 void DecisionalTransperacy_info() {
