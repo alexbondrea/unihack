@@ -1,3 +1,5 @@
+#pragma comment(lib, "Urlmon.lib")
+#include <cstdio>
 #include <iostream>
 #include <iomanip>
 #include <windows.h>
@@ -41,9 +43,11 @@ void EVPID_info(char adresa_EVP[100]) {
         setw(20) << "Dupa 55 ani" << setw(20) << "Permanent";
 
     cout<<endl<<endl;
-    cout<<"Eliberarea buletin la 14 ani: https://mag.wcoomd.org/uploads/2018/05/blank.pdf\n";
-
-    cout<<"Eliberarea buletin la 18 ani: https://mag.wcoomd.org/uploads/2018/05/blank.pdf\n";
+    
+    cout<<"Iti descarcam acum cererea pentru eliberarea cartii de identitate.";
+    const wchar_t* sURL = L"https://mag.wcoomd.org/uploads/2018/05/blank.pdf";
+    const wchar_t* dFile = L"CerereCI.pdf";
+    URLDownloadToFile(NULL, sURL, dFile, 0, NULL);
 
     cout<<"\n\n"<<left;
     cout<<
@@ -63,20 +67,19 @@ void EVPID_info(char adresa_EVP[100]) {
 }
 
 void Truckauth_info(char email_tir[30], char telef_tir[10]) {
-    cout<<"\nInformatii generale:\nhttps://mag.wcoomd.org/uploads/2018/05/blank.pdf \n";
-    //general info
+    cout<<"\nIn prezent, in vederea eliberarii autorizatiei de tranzit a tirurilor, conducatorii trebuie sa inainteze pe email o cerere scrisa alaturi de o harta continand traseul detaliat al vehiculului. \n";
 
-    cout<<"\nTaxe:\nhttps://mag.wcoomd.org/uploads/2018/05/blank.pdf \n";
-    //taxes
+    cout<<"Iti descarcam acum cererea pentru eliberarea autorizatiei de tranzit.";
+    const wchar_t* sURL = L"https://mag.wcoomd.org/uploads/2018/05/blank.pdf";
+    const wchar_t* dFile = L"CerereTranzitTIR.pdf";
+    URLDownloadToFile(NULL, sURL, dFile, 0, NULL);
 
     cout<<"\nInformatii de contact: \nEmail: "<<email_tir<<"\nNumar de telefon: "<< telef_tir<<"\n";
-    //contact info
 
 }
 
 void EVPMarry_info(char adresa_primarie[100], char telef_civile[10], char email_civile[30]) {
     cout<<endl;
-    cout<<"Regulament: https://mag.wcoomd.org/uploads/2018/05/blank.pdf\n";
 
     cout<<endl<<left;
     cout<<
@@ -100,7 +103,7 @@ void ChildAllowance_info() {
     cout<<endl;
 
     cout<<"Informatii generale cu privinta la alocatia copiilor:\n"
-          "[*] Toti copiii in varsta de pana la 18 ani, cetateni romani, fara discriminare\n"
+          "[*] Toti copiii in varsta de pana la 18 ani, avand cetatenie romana\n"
           "[*] Tinerii care au implinit varsta de 18 ani si care urmeaza cursurile invatamantului liceal sau profesional, organizate in conditiile legii, pana la terminarea acestora.\n\n";
 
     cout<<"Documente doveditoare pentru solicitarea alocatiei de stat pentru copii:\n"
@@ -108,8 +111,11 @@ void ChildAllowance_info() {
           "[*] Originalul si copia actului de identitate al reprezentantului legal\n"
           "[*] Documentele din care sa rezulte situatia juridica a copilului fata de reprezentantul legal\n"
           "[*] Pentru copilul cu handicap, cererea este insotita si de copia certificatului de incadrare a copilului intr-un grad de handicap\n\n";
-
-    cout<<"Cerere pentru acordarea alocatiei de stat pentru copii: https://mag.wcoomd.org/uploads/2018/05/blank.pdf";
+    
+    cout<<"Iti descarcam acum cererea pentru a solicita alocatia de stat.";
+    const wchar_t* sURL = L"https://mag.wcoomd.org/uploads/2018/05/blank.pdf";
+    const wchar_t* dFile = L"CerereAlocatiedeStat.pdf";
+    URLDownloadToFile(NULL, sURL, dFile, 0, NULL);
 }
 
 void ChildBirth_info(char locatie_childbirth[50]) {
@@ -150,8 +156,11 @@ void PublicRelations_info(char nume_primar[50], char adresa_primarie[100], char 
     cout<<endl;
     cout<<"Nume primar:"<<nume_primar<< "\n";
     cout<<"Locatie: "<<adresa_primarie<<"\n\n";
-    cout<<"Inscrierea se face pe baza de cerere scrisa, depusa cu cel putin o zi lucratoare inainte, la Registratura Primariei\n";
-    cout<<"Model de cerere: https://mag.wcoomd.org/uploads/2018/05/blank.pdf\n";
+    cout<<"Solicitarea unei audiente se face pe baza de cerere, depusa cu cel putin o zi lucratoare inainte, la registratura primariei\n";
+    cout<<"Iti descarcam acum cererea in vederea solicitarii unei audiente.";
+    const wchar_t* sURL = L"https://mag.wcoomd.org/uploads/2018/05/blank.pdf";
+    const wchar_t* dFile = L"CerereAudiente.pdf";
+    URLDownloadToFile(NULL, sURL, dFile, 0, NULL);
     cout<<"Program de audiente\n"<<"De luni pana vineri, orele 08:00 16:00\n\n";
 
     cout<<"Date de contact:\n"<<"Email:" << email_primar <<"\n"<<"Telefon:"<<telef_primar<< "\n"<<"Fax:"<<fax_primar<< "\n";
