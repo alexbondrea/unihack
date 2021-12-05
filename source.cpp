@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <fstream>
 #include "checker.h"
 #include "info.h"
 using namespace std;
@@ -8,34 +9,38 @@ using namespace std;
 int main() {
     char input[100];
     bool opt = 1;
+    char director_EVP[50], char adresa_EVP[100], char telefon_EVP[10], char fax_EVP[10], char email_tir[30], char telef_tir[10], char adresa_primarie[100], char telef_civile[10], char email_civile[30], char locatie_childbirth[50], char nume_primar[50], char email_primar[30], char telef_primar[10], char fax_primar[10];
+    ifstream in("primarie.txt");
+    in >> director_EVP >> adresa_EVP >> telefon_EVP >> fax_EVP >> email_tir >> telef_tir >> adresa_primarie >> telef_civile >> email_civile >> locatie_childbirth >> nume_primar >> email_primar >> telef_primar >> fax_primar;
+    in.close();
     cout << "Bun venit in Primaria Digital! Aici gasesti informatiile necesare pentru a interactiona cu primaria noastra." << endl;
     cout << "Pentru a incepe, scrie ce vrei sa faci azi: ";
     std::vector<std::string> keywords;
     while (opt==1) {
         cin.get(input, 100);
         if (check_text(input, keywords={"buletin", "carte de identitate", "ci", "c.i.", "pasaport"})==1) {
-            generalEVP_info();
-            EVPID_info(); //check against C1: EVP ID
+            generalEVP_info(director_EVP, adresa_EVP, telefon_EVP, fax_EVP);
+            EVPID_info(adresa_EVP); //check against C1: EVP ID
             continuous(opt);
         } else if (check_text(input, keywords={"casatorie", "stare civila", "starea civila"})==1) {
-            generalEVP_info();
-            EVPMarry_info(); //check against C2: EVP Marriage
+            generalEVP_info(director_EVP, adresa_EVP, telefon_EVP, fax_EVP);
+            EVPMarry_info(adresa_primarie, telef_civile, email_civile); //check against C2: EVP Marriage
             continuous(opt);
         } else if (check_text(input, keywords={"tir", "camion", "tiruri", "camioane", "autorizatie", "oras"})==1) {
-            Truckauth_info(); //check against C3: Truck permits
+            Truckauth_info(email_tir, telef_tir); //check against C3: Truck permits
             continuous(opt);
         } else if (check_text(input, keywords={"alocatie", "bani copii"})==1) {
             ChildAllowance_info(); //check against C4: Legal guardian - child allowance
             continuous(opt);
         }else if (check_text(input, keywords={"nastere", "certificat de nastere"})==1) {
-            ChildBirth_info(); //check against C5: Registering the birth of a child
+            ChildBirth_info(locatie_childbirth); //check against C5: Registering the birth of a child
             continuous(opt);
         } else if (check_text(input, keywords={"taxe", "amenda", "amenzi", "taxa"})==1) {
-            LocalTaxes_info();
+            LocalTaxes_info(adresa_primarie);
             ghiseulro_info(); //check against C6: Local taxes
             continuous(opt);
         } else if (check_text(input, keywords={"audienta", "primarie", "primaria", "primar", "primarul"})==1) {
-            PublicRelations_info(); //check against C7: Public relations
+            PublicRelations_info(nume_primar, adresa_primarie, email_primar, telef_primar, fax_primar); //check against C7: Public relations
             continuous(opt);
         } else if (check_text(input, keywords={"decizii", "hotarare"})==1) {
             DecisionalTransperacy_info(); //check against C8: Decisional transperency
