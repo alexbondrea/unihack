@@ -92,7 +92,7 @@ void EVPMarry_info(char adresa_primarie[100], char telef_civile[10], char email_
     cout<<"[*]In situatia in care nici unul dintre viitorii soti nu au domiciliu sau resedinta in municipiu se va adauga o taxa suplimentara de 200 lei\n";
     cout<<endl<<endl;
 
-    cout<<"Locatie: "<< adresa_primarie "\n";
+    cout<<"Locatie: "<< adresa_primarie << "\n";
     cout<<"Informatii de contact:\nTelefon: "<<telef_civile<<"\nEmail:"<<email_civile<<"\n";
 }
 
