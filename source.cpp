@@ -21,7 +21,7 @@ int main() {
             generalEVP_info();
             EVPMarry_info(); //check against C2: EVP Marriage
             continuous(opt);
-        } else if (check_text(input, keywords={"tir", "autorizatie tir", "acces oras"})==1) {
+        } else if (check_text(input, keywords={"tir", "camion", "tiruri", "camioane", "autorizatie", "oras"})==1) {
             Truckauth_info(); //check against C3: Truck permits
             continuous(opt);
         } else if (check_text(input, keywords={"alocatie", "bani copii"})==1) {
