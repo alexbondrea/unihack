@@ -135,7 +135,7 @@ void ChildBirth_info(char locatie_childbirth[50]) {
     cout<<"Actele se depun la: "<< locatie_childbirth <<"\n";
 }
 
-void LocalTaxes_info(char adresa_primarie[50]) {
+void LocalTaxes_info(char adresa_primarie[100]) {
     cout<<endl;
     cout<<"Locatie: "<<adresa_primarie<<"\n\n";
 
