@@ -4,7 +4,7 @@
 #include <shellapi.h>
 using namespace std;
 
-void generalEVP_info(char director_EVP[50], char adresa_EVP[100], long long telefon_EVP, char fax_EVP[10]) {
+void generalEVP_info(char director_EVP[50], char adresa_EVP[100], char telefon_EVP[10], char fax_EVP[10]) {
     cout<<endl;
 
     cout<<"Program de lucru cu publicul - Evidenta Populatiei\n";
@@ -18,7 +18,7 @@ void generalEVP_info(char director_EVP[50], char adresa_EVP[100], long long tele
 
     cout<<"Director executiv: "<< director_EVP << "\n";
     cout<<"Adresa: "<< adresa_EVP << "\n";
-    cout<<"Numar de telefon: +40"<< telefon_EVP <<"\n";
+    cout<<"Numar de telefon: "<< telefon_EVP <<"\n";
     cout<<"FAX: "<< fax_EVP <<"\n";
 }
 
@@ -62,19 +62,19 @@ void EVPID_info(char adresa_EVP[100]) {
     cout<<"Locatie: " << adresa_EVP <<"\n";
 }
 
-void Truckauth_info(char email_tir[30], long long telef_tir) {
+void Truckauth_info(char email_tir[30], char telef_tir[10]) {
     cout<<"\nInformatii generale:\nhttps://mag.wcoomd.org/uploads/2018/05/blank.pdf \n";
     //general info
 
     cout<<"\nTaxe:\nhttps://mag.wcoomd.org/uploads/2018/05/blank.pdf \n";
     //taxes
 
-    cout<<"\nInformatii de contact: \nEmail: "<<email_tir<<"\nNumar de telefon: +40"<<telef_tir<<"\n";
+    cout<<"\nInformatii de contact: \nEmail: "<<email_tir<<"\nNumar de telefon: "<< telef_tir<<"\n";
     //contact info
 
 }
 
-void EVPMarry_info(char adresa_primarie[100], long long telef_civile, char email_civile[30]) {
+void EVPMarry_info(char adresa_primarie[100], char telef_civile[10], char email_civile[30]) {
     cout<<endl;
     cout<<"Regulament: https://mag.wcoomd.org/uploads/2018/05/blank.pdf\n";
 
@@ -93,7 +93,7 @@ void EVPMarry_info(char adresa_primarie[100], long long telef_civile, char email
     cout<<endl<<endl;
 
     cout<<"Locatie: "<< adresa_primarie << "\n";
-    cout<<"Informatii de contact:\nTelefon: +40"<<telef_civile<<"\nEmail:"<<email_civile<<"\n";
+    cout<<"Informatii de contact:\nTelefon: "<<telef_civile<<"\nEmail:"<<email_civile<<"\n";
 }
 
 void ChildAllowance_info() {
@@ -129,7 +129,7 @@ void ChildBirth_info(char locatie_childbirth[50]) {
     cout<<"Actele se depun la: "<< locatie_childbirth <<"\n";
 }
 
-void LocalTaxes_info(char adresa_primarie[100]) {
+void LocalTaxes_info(char adresa_primarie[50]) {
     cout<<endl;
     cout<<"Locatie: "<<adresa_primarie<<"\n\n";
 
@@ -146,15 +146,15 @@ void ghiseulro_info() {
     cout<<"Taxele si impozitele se pot plati de asemenea si pe site-ul oficial: https://www.ghiseul.ro/ \n";
 }
 
-void PublicRelations_info(char nume_primar[50], char adresa_primarie[100], char email_primar[30], long long telef_primar, long long fax_primar) {
+void PublicRelations_info(char nume_primar[50], char adresa_primarie[100], char email_primar[30], char telef_primar[10], char fax_primar[10]) {
     cout<<endl;
-    cout<<"Nume primar: "<<nume_primar<< "\n";
+    cout<<"Nume primar:"<<nume_primar<< "\n";
     cout<<"Locatie: "<<adresa_primarie<<"\n\n";
     cout<<"Inscrierea se face pe baza de cerere scrisa, depusa cu cel putin o zi lucratoare inainte, la Registratura Primariei\n";
     cout<<"Model de cerere: https://mag.wcoomd.org/uploads/2018/05/blank.pdf\n";
     cout<<"Program de audiente\n"<<"De luni pana vineri, orele 08:00 16:00\n\n";
 
-    cout<<"Date de contact:\n"<<"Email: " << email_primar <<"\n"<<"Telefon: +40"<<telef_primar<< "\n"<<"Fax: 0"<<fax_primar<< "\n";
+    cout<<"Date de contact:\n"<<"Email:" << email_primar <<"\n"<<"Telefon:"<<telef_primar<< "\n"<<"Fax:"<<fax_primar<< "\n";
 
 }
 
