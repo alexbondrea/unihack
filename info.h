@@ -131,7 +131,7 @@ void ChildBirth_info(char locatie_childbirth[50]) {
           "[*] Certificatul de casatorie (original si fotocopie) / sentinta definitiva / certificatul de divort (original si fotocopie)\n"
           "[*] Actul de identitate al mamei (original si fotocopie)\n"
           "[*] Actul de identitate al declarantului (original si fotocopie), dupa caz\n\n";
-          
+
     cout<<"Actele se depun la: "<< locatie_childbirth <<"\n";
 }
 
@@ -168,5 +168,5 @@ void PublicRelations_info(char nume_primar[50], char adresa_primarie[100], char 
 }
 
 void DecisionalTransperacy_info() {
-    ShellExecute(0, 0, L"https://www.monitoruloficial.ro/article--e-Monitor--339.html", 0, 0 , SW_SHOW );
+    ShellExecute(0, 0, reinterpret_cast<LPCSTR>(L"https://www.monitoruloficial.ro/article--e-Monitor--339.html"), 0, 0 , SW_SHOW );
 }

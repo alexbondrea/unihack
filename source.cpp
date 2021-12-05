@@ -43,7 +43,7 @@ int main() {
         } else if (check_text(input, keywords={"audienta", "primarie", "primaria", "primar", "primarul"})==1) {
             PublicRelations_info(nume_primar, adresa_primarie, email_primar, telef_primar, fax_primar); //check against C7: Public relations
             continuous(opt);
-        } else if (check_text(input, keywords={"decizii", "hotarare"})==1) {
+        } else if (check_text(input, keywords={"hotarari", "hotarare"})==1) {
             DecisionalTransperacy_info(); //check against C8: Decisional transperency
             continuous(opt);
         } else {
