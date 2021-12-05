@@ -9,14 +9,15 @@ using namespace std;
 int main() {
     char input[100];
     bool opt = 1;
-    char director_EVP[50], char adresa_EVP[100], char telefon_EVP[10], char fax_EVP[10], char email_tir[30], char telef_tir[10], char adresa_primarie[100], char telef_civile[10], char email_civile[30], char locatie_childbirth[50], char nume_primar[50], char email_primar[30], char telef_primar[10], char fax_primar[10];
+    char director_EVP[50], adresa_EVP[100], telefon_EVP[10], fax_EVP[10], email_tir[30], telef_tir[10], adresa_primarie[100], telef_civile[10], email_civile[30], locatie_childbirth[50], nume_primar[50], email_primar[30], telef_primar[10], fax_primar[10];
     ifstream in("primarie.txt");
     in >> director_EVP >> adresa_EVP >> telefon_EVP >> fax_EVP >> email_tir >> telef_tir >> adresa_primarie >> telef_civile >> email_civile >> locatie_childbirth >> nume_primar >> email_primar >> telef_primar >> fax_primar;
     in.close();
     cout << "Bun venit in Primaria Digital! Aici gasesti informatiile necesare pentru a interactiona cu primaria noastra." << endl;
-    cout << "Pentru a incepe, scrie ce vrei sa faci azi: ";
+    cout << "Sa incepem! ";
     std::vector<std::string> keywords;
     while (opt==1) {
+        cout << "Scrie ce vrei sa faci azi: ";
         cin.get(input, 100);
         if (check_text(input, keywords={"buletin", "carte de identitate", "ci", "c.i.", "pasaport"})==1) {
             generalEVP_info(director_EVP, adresa_EVP, telefon_EVP, fax_EVP);
