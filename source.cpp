@@ -9,8 +9,7 @@ using namespace std;
 int main() {
     char input[100];
     bool opt = 1;
-    char director_EVP[50], adresa_EVP[100], email_tir[30], adresa_primarie[100], email_civile[30], locatie_childbirth[50], nume_primar[50], email_primar[30];
-    long long telefon_EVP, fax_EVP, telef_tir, telef_civile, telef_primar, fax_primar;
+    char director_EVP[50], adresa_EVP[100], telefon_EVP[10], fax_EVP[10], email_tir[30], telef_tir[10], adresa_primarie[100], telef_civile[10], email_civile[30], locatie_childbirth[50], nume_primar[50], email_primar[30], telef_primar[10], fax_primar[10];
     ifstream in("primarie.txt");
     in >> director_EVP >> adresa_EVP >> telefon_EVP >> fax_EVP >> email_tir >> telef_tir >> adresa_primarie >> telef_civile >> email_civile >> locatie_childbirth >> nume_primar >> email_primar >> telef_primar >> fax_primar;
     in.close();
