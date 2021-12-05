@@ -1,11 +1,13 @@
 #include <iostream>
 #include <iomanip>
+#include <windows.h>
+#include <shellapi.h>
 using namespace std;
 
-void generalEVP_info() {
+void generalEVP_info(char director_EVP[50], char adresa_EVP[100], char telefon_EVP[10], char fax_EVP[10]) {
     cout<<endl;
 
-    cout<<"Program de lucru pentru relatii publice:\n";
+    cout<<"Program de lucru cu publicul - Evidenta Populatiei\n";
     cout<<left;
     cout<<
         setw(20) << "[Program]" << setw(20) << "[Depunerea actelor]" << setw(20) << "[Eliberarea documentelor]" <<
@@ -14,20 +16,16 @@ void generalEVP_info() {
 
     cout<<endl<<endl;
 
-    cout<<"GDPR: https://mag.wcoomd.org/uploads/2018/05/blank.pdf \n\n";
-
-    cout<<"Director executiv: Ionel Popescu\n";
-    cout<<"Adresa: Oras, Strada\n";
-    cout<<"Numar de telefon: 0744/777777\n";
-    cout<<"FAX: 0261/777777\n";
+    cout<<"Director executiv: "<< director_EVP << "\n";
+    cout<<"Adresa: "<< adresa_EVP << "\n";
+    cout<<"Numar de telefon: "<< telefon_EVP <<"\n";
+    cout<<"FAX: "<< fax_EVP <<"\n";
 }
 
-void EVPID_info() {
+void EVPID_info(char adresa_EVP[100]) {
     cout<<endl;
 
     cout<<"La nivelul Directiei de Evidenta a Persoanelor a Municipiului, cartile de identitate, cartile de identitate provizorii si vizele de resedinta se elibereaza, in termen de 7 zile calendaristice de la data depunerii cererii, cu exceptia situatiilor in care se efectueaza verificari in teren sau la alte structuri\n\n";
-
-    cout<<"Informatii generale: https://mag.wcoomd.org/uploads/2018/05/blank.pdf\n";
 
     cout<<"\n"<<left;
     cout<<"Termenul de valabilitate al C.I:\n";
@@ -61,22 +59,22 @@ void EVPID_info() {
 
     cout<<"\n\n";
 
-    cout<<"Locatie: Oras, Strada\n";
+    cout<<"Locatie: " << adresa_EVP <<"\n";
 }
 
-void Truckauth_info() {
+void Truckauth_info(char email_tir[30], char telef_tir[10]) {
     cout<<"\nInformatii generale:\nhttps://mag.wcoomd.org/uploads/2018/05/blank.pdf \n";
     //general info
 
     cout<<"\nTaxe:\nhttps://mag.wcoomd.org/uploads/2018/05/blank.pdf \n";
     //taxes
 
-    cout<<"\nInformatii de contact: \nEmail: tir@primarie.ro\nNumar de telefon: 0748/777777\n";
+    cout<<"\nInformatii de contact: \nEmail: "<<email_tir<<"\nNumar de telefon: "<< telef_tir<<"\n";
     //contact info
 
 }
 
-void EVPMarry_info() {
+void EVPMarry_info(char adresa_primarie[100], char telef_civile[10], char email_civile[30]) {
     cout<<endl;
     cout<<"Regulament: https://mag.wcoomd.org/uploads/2018/05/blank.pdf\n";
 
@@ -94,8 +92,8 @@ void EVPMarry_info() {
     cout<<"[*]In situatia in care nici unul dintre viitorii soti nu au domiciliu sau resedinta in municipiu se va adauga o taxa suplimentara de 200 lei\n";
     cout<<endl<<endl;
 
-    cout<<"Locatie: Primaria orasului, Str. Primariei\n";
-    cout<<"Informatii de contact:\nTelefon: 0745/777777\nEmail: starecivila@primarie.ro\n";
+    cout<<"Locatie: "<< adresa_primarie "\n";
+    cout<<"Informatii de contact:\nTelefon: "<<telef_civile<<"\nEmail:"<<email_civile<<"\n";
 }
 
 void ChildAllowance_info() {
@@ -114,7 +112,7 @@ void ChildAllowance_info() {
     cout<<"Cerere pentru acordarea alocatiei de stat pentru copii: https://mag.wcoomd.org/uploads/2018/05/blank.pdf";
 }
 
-void ChildBirth_info() {
+void ChildBirth_info(char locatie_childbirth[50]) {
     cout<<endl;
 
     cout<<"Termenul pentru declararea si inregistrarea nasterii copilului este de:\n"
@@ -127,16 +125,13 @@ void ChildBirth_info() {
           "[*] Certificatul de casatorie (original si fotocopie) / sentinta definitiva / certificatul de divort (original si fotocopie)\n"
           "[*] Actul de identitate al mamei (original si fotocopie)\n"
           "[*] Actul de identitate al declarantului (original si fotocopie), dupa caz\n\n";
-
-    cout<<"Prenumele copilului:\n"
-          "In cazul in care prenumele copilului trecut in certificatul medical constatator al nasterii este diferit de cel declarat, inregistrarea nasterii se face in baza declaratiei scrise, semnata de ambii parinti, data in fata ofiterului de stare civila sau a notarului public, din care sa rezulte prenumele copilului.\n\n";
-
-    cout<<"Locatie: Spitalul Judetean (Maternitatea Municipiului)\n";
+          
+    cout<<"Actele se depun la: "<< locatie_childbirth <<"\n";
 }
 
-void LocalTaxes_info() {
+void LocalTaxes_info(char adresa_primarie[50]) {
     cout<<endl;
-    cout<<"Locatie: Strada Primariei\n\n";
+    cout<<"Locatie: "<<adresa_primarie<<"\n\n";
 
     cout<<"Orar de functionare, Taxe si Impozite\n";
     cout<<"Luni, marti, miercuri : intre orele 13:00 16:00\n";
@@ -151,18 +146,18 @@ void ghiseulro_info() {
     cout<<"Taxele si impozitele se pot plati de asemenea si pe site-ul oficial: https://www.ghiseul.ro/ \n";
 }
 
-void PublicRelations_info() {
+void PublicRelations_info(char nume_primar[50], char adresa_primarie[100], char email_primar[30], char telef_primar[10], char fax_primar[10]) {
     cout<<endl;
-    cout<<"Nume primar: Popescu Ion\n";
-    cout<<"Locatie: Strada Primariei, la Primaria Municipala\n\n";
+    cout<<"Nume primar:"<<nume_primar<< "\n";
+    cout<<"Locatie: "<<adresa_primarie<<"\n\n";
     cout<<"Inscrierea se face pe baza de cerere scrisa, depusa cu cel putin o zi lucratoare inainte, la Registratura Primariei\n";
     cout<<"Model de cerere: https://mag.wcoomd.org/uploads/2018/05/blank.pdf\n";
     cout<<"Program de audiente\n"<<"De luni pana vineri, orele 08:00 16:00\n\n";
 
-    cout<<"Date de contact:\n"<<"Email: relatiipublice@primaria.ro\n"<<"Telefon: 0744/777777\n"<<"Fax: 0261/777777\n";
+    cout<<"Date de contact:\n"<<"Email:" << email_primar <<"\n"<<"Telefon:"<<telef_primar<< "\n"<<"Fax:"<<fax_primar<< "\n";
 
 }
 
 void DecisionalTransperacy_info() {
-    //WIP
+    ShellExecute(0, 0, L"https://www.monitoruloficial.ro/article--e-Monitor--339.html", 0, 0 , SW_SHOW );
 }
