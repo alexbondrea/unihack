@@ -19,6 +19,10 @@ For many people, interacting with public institutions is difficult because of th
 **Primăria Digital** is addressed to natural persons, citizens of a European Economic Area (EEA) state, in accordance with the provisions of Romanian Law 544/2001 on access to information of public interest.
 
 ## Algorithmics
+**Primăria Digital** is a C++, console based application that uses well defined functions for each operation presented to the end user.
+
+The 1st tier functions are used to display relevant information for each specific operation. The actual information is read by the application via a text file, easily editable by each administrator.  
+The 2nd tier functions are used to process user input, find relevant terms - keywords for each specific operation and allow the user to execute multiple operations in a single instance run.
 
 ## Spatial and temporal efficiency
 
