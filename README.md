@@ -26,6 +26,15 @@ The 2nd tier functions are used to process user input, find relevant terms - key
 
 ## Spatial and temporal efficiency
 
+## System requirements
+|  | Minimum system requirements | Recommended system requirements
+| --- | --- | --- |
+| Operating System | Windows XP | Windows 10 
+| Processor | Intel Celeron, Single Core 1.00 GHz | Intel Core i5 Mobile, Dual Core 2.50 GHz |
+| Ram | 512 MB | 2 GB |
+| Broadband connection | 50+ Mbps | 500+ Mbps |
+| Additional software | - | Adobe Acrobat Reader |
+
 ## Notes and subsequent references
 
 This app has been developed during UNIHACK 2021 by
