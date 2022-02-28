@@ -15,7 +15,6 @@ int check_text(string input, vector<std::string> keywords) {
         if (pos!=std::string::npos) {
             return 1;
         }
-
     }
     return 0;
 }
